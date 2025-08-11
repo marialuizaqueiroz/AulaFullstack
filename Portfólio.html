@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfólio de Maria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rosa-principal: #ff69b4;
+            --rosa-detalhe: #ff69b4;
+            --preto: #000;
+            --cinza: #f8f8fa;
+        }
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: #fff;
+            margin: 0;
+            color: #000;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto 0 auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 6px 32px #e0e0e0;
+            padding: 40px 32px 32px 32px;
+            border: 1.5px solid #ff69b4;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 36px;
+            background: #fff;
+            border-radius: 18px 18px 0 0;
+            padding: 24px 0 18px 0;
+            box-shadow: 0 2px 12px #e0e0e0;
+        }
+        .nome {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 2.7em;
+            color: #000;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        .titulo {
+            font-size: 1.2em;
+            color: #000;
+            margin-bottom: 10px;
+        }
+        .slogan {
+            font-size: 1.1em;
+            color: #000;
+            margin-bottom: 0;
+        }
+        section {
+            margin-bottom: 32px;
+            background: #fff;
+            border-radius: 14px;
+            border: 1.5px solid #ff69b4;
+            box-shadow: 0 2px 12px #e0e0e0;
+            padding: 24px 18px 18px 18px;
+        }
+        h2 {
+            color: #000 !important;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 1.5em;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            border-left: 5px solid var(--rosa-detalhe);
+            padding-left: 12px;
+        }
+        .sobre {
+            font-size: 1.08em;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+        .habilidades {
+            margin: 18px 0 0 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .habilidade {
+            background: #f8f8fa;
+            color: #000;
+            border-radius: 16px;
+            padding: 6px 18px;
+            font-size: 1em;
+            font-weight: 500;
+            border: 1.5px solid var(--rosa-detalhe);
+        }
+        .projetos-lista {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+            justify-content: center;
+        }
+        .card-projeto {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px #e0e0e0;
+            padding: 22px 24px 18px 24px;
+            min-width: 220px;
+            max-width: 270px;
+            flex: 1 1 220px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1.5px solid var(--rosa-detalhe);
+        }
+        .card-projeto:hover {
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 8px 24px #e0e0e0;
+            background: #f8f8fa;
+            border-color: var(--rosa-detalhe);
+        }
+        .card-projeto strong {
+            color: var(--rosa-principal) !important;
+            font-size: 1.1em;
+        }
+        .card-projeto a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 500;
+            background: #fff;
+            border-radius: 8px;
+            padding: 2px 10px;
+            margin-top: 8px;
+            display: inline-block;
+            border: 1px solid var(--rosa-detalhe);
+            transition: background 0.2s, color 0.2s;
+        }
+        .card-projeto a:hover {
+            text-decoration: underline;
+            background: var(--rosa-detalhe);
+            color: #fff;
+        }
+        .contato-lista {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        .contato-lista li {
+            list-style: none;
+            background: #f8f8fa;
+            border-radius: 12px;
+            padding: 10px 18px;
+            color: #000;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1.5px solid var(--rosa-detalhe);
+        }
+        .contato-lista a {
+            color: #000;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .contato-lista a:hover {
+            text-decoration: underline;
+            color: var(--rosa-detalhe);
+        }
+        .icones-contato {
+            width: 22px;
+            height: 22px;
+            vertical-align: middle;
+        }
+        footer {
+            text-align: center;
+            color: #000;
+            font-size: 1.1em;
+            margin-top: 40px;
+            padding-bottom: 18px;
+            letter-spacing: 1px;
+            background: #fff;
+            border-radius: 0 0 18px 18px;
+            box-shadow: 0 -2px 12px #e0e0e0;
+            padding-top: 16px;
+            border-top: 2px solid var(--rosa-detalhe);
+        }
+        @media (max-width: 700px) {
+            .container {
+                padding: 18px 4vw;
+            }
+            .projetos-lista {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfólio de Maria</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rosa-principal: #ff69b4;
+            --rosa-escuro: #e754a1;
+            --rosa-claro: #ffe4f0;
+            --branco: #fff;
+            --cinza: #f8f8fa;
+            --cinza-texto: #6d6d6d;
+        }
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: #ffe4f0;
+            margin: 0;
+            color: var(--cinza-texto);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto 0 auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 6px 32px #ff69b422;
+            padding: 40px 32px 32px 32px;
+            border: 1.5px solid #ffe4f0;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 36px;
+            background: #fff;
+            border-radius: 18px 18px 0 0;
+            padding: 24px 0 18px 0;
+            box-shadow: 0 2px 12px #ff69b422;
+        }
+        .nome {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 2.7em;
+            color: var(--preto);
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+        .titulo {
+            font-size: 1.2em;
+            color: var(--preto);
+            margin-bottom: 10px;
+        }
+        .slogan {
+            font-size: 1.1em;
+            color: var(--preto);
+            margin-bottom: 0;
+        }
+        section {
+            margin-bottom: 32px;
+            background: #fff;
+            border-radius: 14px;
+            border: 1.5px solid #ffe4f0;
+            box-shadow: 0 2px 12px #ff69b422;
+            padding: 24px 18px 18px 18px;
+        }
+        h2 {
+            color: var(--rosa-principal);
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 1.5em;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+        .sobre {
+            font-size: 1.08em;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+        .habilidades {
+            margin: 18px 0 0 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .habilidade {
+            background: #ffe4f0;
+            color: var(--rosa-escuro);
+            border-radius: 16px;
+            padding: 6px 18px;
+            font-size: 1em;
+            font-weight: 500;
+            border: 1.5px solid #ff69b4;
+        }
+        .projetos-lista {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+            justify-content: center;
+        }
+        .card-projeto {
+            background: #fff0fa;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px #ff69b422;
+            padding: 22px 24px 18px 24px;
+            min-width: 220px;
+            max-width: 270px;
+            flex: 1 1 220px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1.5px solid #ffb6e6;
+        }
+        .card-projeto:hover {
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 8px 24px #ff69b455;
+            background: #fff;
+            border-color: #e754a1;
+        }
+        .card-projeto strong {
+            color: var(--rosa-escuro);
+            font-size: 1.1em;
+        }
+        .card-projeto a {
+            color: var(--rosa-principal);
+            text-decoration: none;
+            font-weight: 500;
+            background: #fff;
+            border-radius: 8px;
+            padding: 2px 10px;
+            margin-top: 8px;
+            display: inline-block;
+            border: 1px solid #ffb6e6;
+            transition: background 0.2s, color 0.2s;
+        }
+        .card-projeto a:hover {
+            text-decoration: underline;
+            background: #ffe4f0;
+            color: var(--rosa-escuro);
+        }
+        .contato-lista {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        .contato-lista li {
+            list-style: none;
+            background: #fff0fa;
+            border-radius: 12px;
+            padding: 10px 18px;
+            color: var(--rosa-escuro);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 1.5px solid #ffb6e6;
+        }
+        .contato-lista a {
+            color: var(--rosa-principal);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .contato-lista a:hover {
+            text-decoration: underline;
+            color: var(--rosa-escuro);
+        }
+        .icones-contato {
+            width: 22px;
+            height: 22px;
+            vertical-align: middle;
+        }
+        footer {
+            text-align: center;
+            color: var(--rosa-escuro);
+            font-size: 1.1em;
+            margin-top: 40px;
+            padding-bottom: 18px;
+            letter-spacing: 1px;
+            background: #fff;
+            border-radius: 0 0 18px 18px;
+            box-shadow: 0 -2px 12px #ff69b422;
+            padding-top: 16px;
+        }
+        @media (max-width: 700px) {
+            .container {
+                padding: 18px 4vw;
+            }
+            .projetos-lista {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="nome">Maria Luiza Queiroz</div>
+            <div class="titulo">Desenvolvedora Full Stack</div>
+            <div class="slogan">Transformando ideias em soluções digitais com criatividade e código 💖</div>
+        </header>
+
+        <section>
+            <h2>Sobre Mim</h2>
+            <p class="sobre">
+                Olá! Sou Maria Luiza, apaixonada por tecnologia e desenvolvimento web. Tenho experiência em projetos modernos, sempre buscando unir design, funcionalidade e inovação.<br><br>
+                <strong>Principais habilidades:</strong>
+            </p>
+            <ul class="habilidades">
+                <li class="habilidade">Angular</li>
+                <li class="habilidade">Java</li>
+                <li class="habilidade">JavaScript</li>
+                <li class="habilidade">C</li>
+                <!-- <li class="habilidade">Python</li> -->
+                <li class="habilidade">Node.js</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Projetos em Destaque</h2>
+            <div class="projetos-lista">
+                <div class="card-projeto">
+                    <strong>Receitas Fáceis</strong>
+                    <p>Plataforma para compartilhar e buscar receitas deliciosas. Interface intuitiva e responsiva.</p>
+                    <a href="#" target="_blank">Ver projeto</a>
+                </div>
+                <div class="card-projeto">
+                    <strong>Meu Portfólio</strong>
+                    <p>Site pessoal para apresentar meus trabalhos, habilidades e trajetória profissional.</p>
+                    <a href="#" target="_blank">Ver projeto</a>
+                </div>
+                <div class="card-projeto">
+                    <strong>Lista de Tarefas</strong>
+                    <p>Aplicação web para organizar tarefas do dia a dia, com filtros e marcação de concluídas.</p>
+                    <a href="#" target="_blank">Ver projeto</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Contato</h2>
+            <ul class="contato-lista">
+                <li>
+                    <img class="icones-contato" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Email" style="filter:invert(38%) sepia(99%) saturate(749%) hue-rotate(305deg) brightness(93%) contrast(92%);"> 
+                    <a href="mailto:marialuqrls2005@gmail.com">marialuqrls2005@gmail.com</a>
+                </li>
+                <li>
+                    <img class="icones-contato" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="filter:invert(38%) sepia(99%) saturate(749%) hue-rotate(305deg) brightness(93%) contrast(92%);"> 
+                    <a href="https://www.linkedin.com/in/maria-luiza-queiroz-rocha-lima-e-silva" target="_blank">Maria Luiza Queiroz Rocha Lima e Silva</a>
+                </li>
+                <li>
+                    <img class="icones-contato" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" style="filter:invert(38%) sepia(99%) saturate(749%) hue-rotate(305deg) brightness(93%) contrast(92%);"> 
+                    <a href="https://github.com/marialuizaqueiroz" target="_blank">github.com/marialuizaqueiroz</a>
+                </li>
+            </ul>
+        </section>
+
+        <footer>
+            <span style="color:#000">&copy; 2025 Maria Luiza. Feito com</span> <span style="color:var(--preto)">&#10084;</span>
+        </footer>
+    </div>
+</body>
+    </div>
+</body>
+</html>
